@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 18 Nis 2021, 17:31:43
+-- Üretim Zamanı: 05 May 2021, 21:54:03
 -- Sunucu sürümü: 10.4.18-MariaDB
 -- PHP Sürümü: 8.0.3
 
@@ -30,9 +30,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `about_me` (
   `about_id` int(11) NOT NULL,
   `about_title` varchar(50) NOT NULL,
-  `bio` varchar(250) NOT NULL,
+  `bio` text NOT NULL,
   `cv` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tablo döküm verisi `about_me`
+--
+
+INSERT INTO `about_me` (`about_id`, `about_title`, `bio`, `cv`) VALUES
+(1, 'Beni Tanıyın', '   Merhaba, İnönü Üniversitesi bilgisayar mühendisliği bölümünde okuyorum. Tekil faaliyetlerden hoşlandığım için karantinadan keyif alanlardanım. Pandemide oldukça fazla vakit ayırdığım hobiler dikiş, kanaviçe, amigurumi. Çat pat gitar, orta derecede yan flüt çalıyorum. 2 minnoş hamsterım var. Oldukça hayvanseverim ama annem evde köpek beslememe izin vermiyor.', '');
 
 -- --------------------------------------------------------
 
@@ -42,10 +49,10 @@ CREATE TABLE `about_me` (
 
 CREATE TABLE `contact_info` (
   `contact_id` int(11) NOT NULL,
-  `content` varchar(250) NOT NULL,
-  `location` varchar(250) NOT NULL,
+  `contact_title` varchar(50) NOT NULL,
+  `locationn` varchar(250) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `gsm` int(11) NOT NULL,
+  `gsm` varchar(13) NOT NULL,
   `facebook` varchar(50) NOT NULL,
   `instagram` varchar(50) NOT NULL,
   `twitter` varchar(50) NOT NULL,
@@ -53,6 +60,35 @@ CREATE TABLE `contact_info` (
   `linkedin` varchar(50) NOT NULL,
   `copyright` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tablo döküm verisi `contact_info`
+--
+
+INSERT INTO `contact_info` (`contact_id`, `contact_title`, `locationn`, `email`, `gsm`, `facebook`, `instagram`, `twitter`, `youtube`, `linkedin`, `copyright`) VALUES
+(1, 'İLETİŞİM', 'Batman Merkez/Türkiye', '02200201042@ogr.inonu.edu.tr', '+905533622634', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'Büşra Ertekin');
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `home`
+--
+
+CREATE TABLE `home` (
+  `home_id` int(11) NOT NULL,
+  `facebook` varchar(250) NOT NULL,
+  `instagram` varchar(250) NOT NULL,
+  `twitter` varchar(250) NOT NULL,
+  `youtube` varchar(250) NOT NULL,
+  `linkedin` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tablo döküm verisi `home`
+--
+
+INSERT INTO `home` (`home_id`, `facebook`, `instagram`, `twitter`, `youtube`, `linkedin`) VALUES
+(1, 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.youtube.com/');
 
 -- --------------------------------------------------------
 
@@ -62,13 +98,20 @@ CREATE TABLE `contact_info` (
 
 CREATE TABLE `personal_info` (
   `personal_id` int(11) NOT NULL,
-  `personal_name` varchar(50) NOT NULL,
-  `age` int(11) NOT NULL,
+  `namee` varchar(50) NOT NULL,
+  `birthday` varchar(30) NOT NULL,
   `province` varchar(50) NOT NULL,
   `job` varchar(50) NOT NULL,
   `uni` varchar(50) NOT NULL,
   `web_site` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tablo döküm verisi `personal_info`
+--
+
+INSERT INTO `personal_info` (`personal_id`, `namee`, `birthday`, `province`, `job`, `uni`, `web_site`) VALUES
+(1, 'Büşra Ertekin', '31 Ocak 1999', 'Konya', 'Öğrenci', 'İnönü Ü.', 'www.kardswebsite.com');
 
 -- --------------------------------------------------------
 
@@ -77,7 +120,7 @@ CREATE TABLE `personal_info` (
 --
 
 CREATE TABLE `site_settings` (
-  `setting_id` int(11) NOT NULL,
+  `settings_id` int(11) NOT NULL,
   `site_title` varchar(50) NOT NULL,
   `title` varchar(50) NOT NULL,
   `subtitle` varchar(50) NOT NULL,
@@ -88,11 +131,8 @@ CREATE TABLE `site_settings` (
 -- Tablo döküm verisi `site_settings`
 --
 
-INSERT INTO `site_settings` (`setting_id`, `site_title`, `title`, `subtitle`, `picture`) VALUES
-(1, 'Kards', '', '', ''),
-(2, 'Büşra Ertekin', '', '', ''),
-(3, 'Büşra Ertekin', '', '', ''),
-(4, 'Büşra Ertekin', '', '', '');
+INSERT INTO `site_settings` (`settings_id`, `site_title`, `title`, `subtitle`, `picture`) VALUES
+(1, 'Büşra Ertekin', 'Büşra Ertekin', 'BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ', 'Calatayud_Cancion_De_Cuna_tab-1-212x300.jpg');
 
 -- --------------------------------------------------------
 
@@ -103,17 +143,25 @@ INSERT INTO `site_settings` (`setting_id`, `site_title`, `title`, `subtitle`, `p
 CREATE TABLE `skills` (
   `skill_id` int(11) NOT NULL,
   `skill_title` varchar(50) NOT NULL,
+  `content` text NOT NULL,
   `first_skill` varchar(50) NOT NULL,
   `second_skill` varchar(50) NOT NULL,
-  `thirt_skill` varchar(50) NOT NULL,
-  `forth_skill` varchar(50) NOT NULL,
+  `third_skill` varchar(50) NOT NULL,
+  `fourth_skill` varchar(50) NOT NULL,
   `fifth_skill` varchar(50) NOT NULL,
   `first_counter` varchar(10) NOT NULL,
   `second_counter` varchar(10) NOT NULL,
-  `thirt_counter` varchar(10) NOT NULL,
-  `forth_counter` varchar(10) NOT NULL,
+  `third_counter` varchar(10) NOT NULL,
+  `fourth_counter` varchar(10) NOT NULL,
   `fifth_counter` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tablo döküm verisi `skills`
+--
+
+INSERT INTO `skills` (`skill_id`, `skill_title`, `content`, `first_skill`, `second_skill`, `third_skill`, `fourth_skill`, `fifth_skill`, `first_counter`, `second_counter`, `third_counter`, `fourth_counter`, `fifth_counter`) VALUES
+(1, 'YETENEKLER', 'Öğrenci olduğum için teknik bilgi gerektiren yeteneklerim henüz gelişmemiştir. Göz dolduran davranışsal yetenek oranlarım sayesinde kısa sürede teknik yeteneklerim bölümünü de açabileceğime inanıyorum.\r\n', 'DUYGU YÖNETİMİ', 'SABIR', 'İTAAT', 'GERİ BİLDİRİM', 'İRADE', '90', '85', '100', '90', '75');
 
 -- --------------------------------------------------------
 
@@ -152,6 +200,12 @@ ALTER TABLE `contact_info`
   ADD PRIMARY KEY (`contact_id`);
 
 --
+-- Tablo için indeksler `home`
+--
+ALTER TABLE `home`
+  ADD PRIMARY KEY (`home_id`);
+
+--
 -- Tablo için indeksler `personal_info`
 --
 ALTER TABLE `personal_info`
@@ -161,7 +215,7 @@ ALTER TABLE `personal_info`
 -- Tablo için indeksler `site_settings`
 --
 ALTER TABLE `site_settings`
-  ADD PRIMARY KEY (`setting_id`);
+  ADD PRIMARY KEY (`settings_id`);
 
 --
 -- Tablo için indeksler `skills`
@@ -183,31 +237,37 @@ ALTER TABLE `user`
 -- Tablo için AUTO_INCREMENT değeri `about_me`
 --
 ALTER TABLE `about_me`
-  MODIFY `about_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `about_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `contact_info`
 --
 ALTER TABLE `contact_info`
-  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `contact_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `home`
+--
+ALTER TABLE `home`
+  MODIFY `home_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `personal_info`
 --
 ALTER TABLE `personal_info`
-  MODIFY `personal_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `personal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `site_settings`
 --
 ALTER TABLE `site_settings`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `settings_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `skill_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `skill_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `user`
