@@ -1,5 +1,5 @@
 <?php
-include '../nedmin/connect.php';
+include './nedmin/connect.php';
 
 $fetch_home = $db->prepare("SELECT * FROM home WHERE home_id=1");
 $fetch_home->execute();
@@ -49,19 +49,19 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 
 	<!-- CSS
    ================================================== -->
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/main.css">
+	<link rel="stylesheet" href="./assets/css/vendor.css">
 
 	<!-- script
    ================================================== -->
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+	<script src="./assets/js/modernizr.js"></script>
+	<script src="./assets/js/pace.min.js"></script>
 	<script src="https://kit.fontawesome.com/69b6bd0355.js" crossorigin="anonymous"></script>
 
 	<!-- favicons
 	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="icon" type="image/png" href="./assets/favicon">
 
 </head>
 
@@ -139,7 +139,7 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 
 				<div class="intro-info"></div>
 
-				<img src="images/profil.jpeg" style="width: 450px;" alt="Profile Picture">
+				<img src="./assets/images/profil.jpeg" style="width: 450px;" alt="Profile Picture">
 
 				<p class="lead"><?php echo $fetch_a['bio'] ?> </p>
 			</div>
@@ -379,9 +379,9 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 
 	<!-- Java Script
    ================================================== -->
-	<script src="js/jquery-2.1.3.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+	<script src="./assets/js/jquery-2.1.3.min.js"></script>
+	<script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/main.js"></script>
 
 </body>
 

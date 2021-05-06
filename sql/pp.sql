@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 05 May 2021, 21:54:03
+-- Üretim Zamanı: 06 May 2021, 19:01:47
 -- Sunucu sürümü: 10.4.18-MariaDB
 -- PHP Sürümü: 8.0.3
 
@@ -39,7 +39,7 @@ CREATE TABLE `about_me` (
 --
 
 INSERT INTO `about_me` (`about_id`, `about_title`, `bio`, `cv`) VALUES
-(1, 'Beni Tanıyın', '   Merhaba, İnönü Üniversitesi bilgisayar mühendisliği bölümünde okuyorum. Tekil faaliyetlerden hoşlandığım için karantinadan keyif alanlardanım. Pandemide oldukça fazla vakit ayırdığım hobiler dikiş, kanaviçe, amigurumi. Çat pat gitar, orta derecede yan flüt çalıyorum. 2 minnoş hamsterım var. Oldukça hayvanseverim ama annem evde köpek beslememe izin vermiyor.', '');
+(1, 'Beni TanıyınX', '      Merhaba, İnönü Üniversitesi bilgisayar mühendisliği bölümünde okuyorum. Tekil faaliyetlerden hoşlandığım için karantinadan keyif alanlardanım. Pandemide oldukça fazla vakit ayırdığım hobiler dikiş, kanaviçe, amigurumi. Çat pat gitar, orta derecede yan flüt çalıyorum. 2 minnoş hamsterım var. Oldukça hayvanseverim ama annem evde köpek beslememe izin vermiyor.XX', '');
 
 -- --------------------------------------------------------
 
@@ -66,7 +66,7 @@ CREATE TABLE `contact_info` (
 --
 
 INSERT INTO `contact_info` (`contact_id`, `contact_title`, `locationn`, `email`, `gsm`, `facebook`, `instagram`, `twitter`, `youtube`, `linkedin`, `copyright`) VALUES
-(1, 'İLETİŞİM', 'Batman Merkez/Türkiye', '02200201042@ogr.inonu.edu.tr', '+905533622634', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'Büşra Ertekin');
+(1, 'İLETİŞİM', 'Batman Merkez/Türkiye', '02200201042@ogr.inonu.edu.tr', '+905533622634', 'https://www.facebook.com./', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'https://www.google.com.tr/', 'Büşra Ertekin');
 
 -- --------------------------------------------------------
 
@@ -88,7 +88,7 @@ CREATE TABLE `home` (
 --
 
 INSERT INTO `home` (`home_id`, `facebook`, `instagram`, `twitter`, `youtube`, `linkedin`) VALUES
-(1, 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.youtube.com/');
+(1, 'https://www.facebook.com/', 'https://www.facebook.com/', 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.youtube.com/');
 
 -- --------------------------------------------------------
 
@@ -161,7 +161,7 @@ CREATE TABLE `skills` (
 --
 
 INSERT INTO `skills` (`skill_id`, `skill_title`, `content`, `first_skill`, `second_skill`, `third_skill`, `fourth_skill`, `fifth_skill`, `first_counter`, `second_counter`, `third_counter`, `fourth_counter`, `fifth_counter`) VALUES
-(1, 'YETENEKLER', 'Öğrenci olduğum için teknik bilgi gerektiren yeteneklerim henüz gelişmemiştir. Göz dolduran davranışsal yetenek oranlarım sayesinde kısa sürede teknik yeteneklerim bölümünü de açabileceğime inanıyorum.\r\n', 'DUYGU YÖNETİMİ', 'SABIR', 'İTAAT', 'GERİ BİLDİRİM', 'İRADE', '90', '85', '100', '90', '75');
+(1, 'YETENEKLER', 'Öğrenci olduğum için teknik bilgi gerektiren yeteneklerim henüz gelişmemiştir. Göz dolduran davranışsal yetenek oranlarım sayesinde kısa sürede teknik yeteneklerim bölümünü de açabileceğime inanıyorum.\r\n', 'DUYGU YÖNETİMİ', 'SABIR', 'İTAAT', 'GERİ BİLDİRİM', 'İRADE', '40', '60', '40', '60', '40');
 
 -- --------------------------------------------------------
 
@@ -181,7 +181,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `email`, `password`) VALUES
-(23, 'busra', 'nssdsd@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b');
+(1, 'busra', 'nssdsd@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b');
 
 --
 -- Dökümü yapılmış tablolar için indeksler

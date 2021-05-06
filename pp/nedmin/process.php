@@ -226,7 +226,7 @@ if (isset($_POST['update_profile'])) {
     province ='$province',
     job ='$job',
     uni ='$uni',
-    web_site ='$web_site' WHERE profile_id=1
+    web_site ='$web_site' WHERE personal_id=1
     ");
     $update_p = $update_profile->execute();
     if ($update_p) {
@@ -381,13 +381,24 @@ if (isset($_POST['update_settings'])) {
     $subtitle = $_POST['subtitle'];
     $picture = $_POST['picture'];
     $password = $_POST['password'];
-    $password2 = $_POST['password2'];
+    $newpassword = $_POST['newpassword'];
+    $newpassword2 = $_POST['newpassword2'];
 
-    if ($password == $password2) {
-        if (strlen($password) >=6) {
-            $pass1 = sha1($password);
-            $newpassword = $db->prepare("UPDATE user SET password='$pass1' ");
-            $updatepass = $newpassword->execute();
+    $pass2 = sha1($password);
+
+    $chancepass = $db->prepare("SELECT * FROM user WHERE user_id=1 AND password='$pass2'");
+    $chancepass->execute(); 
+    $countt = $chancepass->rowCount();
+    if ($countt == 1) {
+        $pass3=sha1($newpassword);
+        if(!($pass3==$pass2)){
+            if ($newpassword == $newpassword2) {
+                if (strlen($newpassword) >= 6) {
+                $pass1 = sha1($newpassword);
+                $admin_newpassword = $db->prepare("UPDATE user SET password='$pass1' ");
+                $updatepass = $admin_newpassword->execute();
+                }
+            }
         }
     }
     $update_settings = $db->prepare("UPDATE site_settings SET 
@@ -401,7 +412,7 @@ if (isset($_POST['update_settings'])) {
     $update_set = $update_settings->execute();
 
     if ($update_set and $updatepass) {
-        header("Location: settings.php?update_set=ok");
+        header("Location: logout.php");
     } else {
         header("Location: settings.php?update_set=no");
     }

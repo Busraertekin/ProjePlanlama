@@ -116,10 +116,10 @@ $fetch_a=$fetch_about->fetch(PDO::FETCH_ASSOC);
         </button>
       </div>
     <?php } ?>
-    <form class="form-horizontal form-label-left" action="process.php" method="POST">
+    
 
       <div class="row">
-
+      <form class="form-horizontal form-label-left" action="process.php" method="POST">
         <div class="row">
 
           <!-- form input mask -->

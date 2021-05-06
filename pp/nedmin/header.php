@@ -3,6 +3,9 @@
 include 'connect.php';
 ob_start();
 session_start();
+if(!isset($_SESSION['user_name'])){
+  header("Location: login.php");
+}
 
 $user_name = $_SESSION['user_name'];
 
