@@ -69,7 +69,7 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 
 	<!-- header 
    ================================================== -->
-	<header>
+   <header>
 		<div class="top-bar">
 
 			<div class="row">
@@ -83,19 +83,20 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 						<li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
 						<li><a class="smoothscroll" href="#about" title="">Hakkımda</a></li>
 						<li><a class="smoothscroll" href="#contact" title="">İletişim</a></li>
-						<li><a href="styles.html" title="">Style Demo</a></li>
+						
 					</ul>
 				</nav>
 			</div> <!-- /top-bar -->
 
 		</div> <!-- /row -->
-	</header> <!-- /header -->
+   </header> <!-- /header -->
 
 	<!-- intro section
    ================================================== -->
-	<section id="intro">
+   <section id="intro">
 
-		<div class="intro-overlay"></div>
+    <div class="intro-overlay"> 
+	</div>
 
 		<div class="intro-content">
 			<div class="row">
@@ -108,29 +109,29 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 					<p class="intro-position">
 						<span><?php echo $fetch_set['subtitle']; ?></span>
 					</p>
-
+					<ul class="intro-social">
+					<li><a href="<?php echo $fetch_h['facebook'] ?>" target="_blank" title="Facebook"> <i class="fab fa-facebook-square fa-1x"></i>
+					<li><a href="<?php echo $fetch_h['instagram'] ?>" target="_blank" title="İnstagram"><i class="fab fa-instagram-square fa-1x"></i>
+			 		<li><a href="<?php echo $fetch_h['twitter'] ?>" target="_blank" title="Twitter"><i class="fab fa-twitter-square fa-1x"></i>
+					<li><a href="<?php echo $fetch_h['youtube'] ?>" target="_blank" title="youtube"><i class="fab fa-youtube-square fa-1x"></i>
+					<li><a href="<?php echo $fetch_h['linkedin'] ?>" target="_blank" title="linkedin"> <i class="fab fa-linkedin fa-1x"></i>
+					</ul>
 					<a class="button stroke smoothscroll" href="#about" title="">Hakkımda Daha Fazla</a>
 
 				</div>
+				
 
 			</div>
+			
 		</div> <!-- /intro-content -->
 
-		<ul class="intro-social">
-			<li><a href="<?php echo $fetch_h['facebook'] ?>" target="_blank" title="Facebook"> <i class="fab fa-facebook-square fa-1x"></i>
-			<li><a href="<?php echo $fetch_h['instagram'] ?>" target="_blank" title="İnstagram"><i class="fab fa-instagram-square fa-1x"></i>
-			<li><a href="<?php echo $fetch_h['twitter'] ?>" target="_blank" title="Twitter"><i class="fab fa-twitter-square fa-1x"></i>
-			<li><a href="<?php echo $fetch_h['youtube'] ?>" target="_blank" title="youtube"><i class="fab fa-youtube-square fa-1x"></i>
-			<li><a href="<?php echo $fetch_h['linkedin'] ?>" target="_blank" title="linkedin"> <i class="fab fa-linkedin fa-1x"></i>
-		</ul> <!-- /intro-social -->
 
-	</section> <!-- /intro -->
+  </section>
 
 
-	<!-- about section
+   <!-- about section
    ================================================== -->
-
-	<section id="about">
+   <section id="about">
 		<div class="row section-intro">
 			<div class="col-twelve">
 
@@ -139,12 +140,12 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 
 				<div class="intro-info"></div>
 
-				<img src="./assets/images/profil.jpeg" style="width: 450px;" alt="Profile Picture">
+				 <img src="./assets/images/profil.jpeg" style="width: 450px;" alt="Profile Picture">
 
-				<p class="lead"><?php echo $fetch_a['bio'] ?> </p>
-			</div>
+				 <p class="lead"><?php echo $fetch_a['bio'] ?> </p>
+			    </div>
 
-		</div>
+		    </div>
 		</div> <!-- /section-intro -->
 
 		<div class="row about-content">
@@ -186,9 +187,7 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 
 			<div class="col-eight tab-full">
 				<h3><?php echo $fetch_s['skill_title'] ?></h3>
-
-
-				<p> <?php echo $fetch_s['content'] ?> </p>
+                <p> <?php echo $fetch_s['content'] ?> </p>
 
 				<ul class="skill-bars">
 					<li>
@@ -225,7 +224,9 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 				<a href="<?php echo $fetch_a['cv'] ?>" title="CV İndir" class="button button-primary">CV İndir</a>
 			</div>
 		</div>
-	</section> <!-- /process-->
+
+
+  </section> <!-- /process-->
 
 
 
@@ -346,6 +347,9 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 
 	<footer>
 		<div class="row">
+		<div id="go-top">
+				<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+			</div>
 
 			<div class="col-six tab-full pull-right social">
 
@@ -366,9 +370,7 @@ $fetch_set = $fetch_settings->fetch(PDO::FETCH_ASSOC);
 				</div>
 			</div>
 
-			<div id="go-top">
-				<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-			</div>
+			
 
 		</div> <!-- /row -->
 	</footer>

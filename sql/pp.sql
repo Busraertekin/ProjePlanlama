@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 06 May 2021, 19:01:47
+-- Üretim Zamanı: 09 Haz 2021, 16:24:44
 -- Sunucu sürümü: 10.4.18-MariaDB
 -- PHP Sürümü: 8.0.3
 
@@ -39,7 +39,7 @@ CREATE TABLE `about_me` (
 --
 
 INSERT INTO `about_me` (`about_id`, `about_title`, `bio`, `cv`) VALUES
-(1, 'Beni TanıyınX', '      Merhaba, İnönü Üniversitesi bilgisayar mühendisliği bölümünde okuyorum. Tekil faaliyetlerden hoşlandığım için karantinadan keyif alanlardanım. Pandemide oldukça fazla vakit ayırdığım hobiler dikiş, kanaviçe, amigurumi. Çat pat gitar, orta derecede yan flüt çalıyorum. 2 minnoş hamsterım var. Oldukça hayvanseverim ama annem evde köpek beslememe izin vermiyor.XX', '');
+(1, 'Beni Tanıyın', '       Merhaba, İnönü Üniversitesi bilgisayar mühendisliği bölümünde okuyorum. Tekil faaliyetlerden hoşlandığım için karantinadan keyif alanlardanım. Pandemide oldukça fazla vakit ayırdığım hobiler dikiş, kanaviçe, amigurumi. Çat pat gitar, orta derecede yan flüt çalıyorum. 2 minnoş hamsterım var. Oldukça hayvanseverim ama annem evde köpek beslememe izin vermiyor.', '');
 
 -- --------------------------------------------------------
 
@@ -88,7 +88,7 @@ CREATE TABLE `home` (
 --
 
 INSERT INTO `home` (`home_id`, `facebook`, `instagram`, `twitter`, `youtube`, `linkedin`) VALUES
-(1, 'https://www.facebook.com/', 'https://www.facebook.com/', 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.youtube.com/');
+(1, 'https://www.facebook.com/', 'https://www.facebook.com/', 'https://www.youtube.com/', 'https://www.youtube.com/', 'https://www.google.com/');
 
 -- --------------------------------------------------------
 
@@ -132,7 +132,7 @@ CREATE TABLE `site_settings` (
 --
 
 INSERT INTO `site_settings` (`settings_id`, `site_title`, `title`, `subtitle`, `picture`) VALUES
-(1, 'Büşra Ertekin', 'Büşra Ertekin', 'BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ', 'Calatayud_Cancion_De_Cuna_tab-1-212x300.jpg');
+(1, 'Büşra Ertekin', 'Büşra Ertekin', 'BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ', 'Smile by Toastyz.png');
 
 -- --------------------------------------------------------
 
