@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 09 Haz 2021, 16:24:44
+-- Üretim Zamanı: 13 Haz 2021, 08:37:49
 -- Sunucu sürümü: 10.4.18-MariaDB
 -- PHP Sürümü: 8.0.3
 
@@ -132,7 +132,7 @@ CREATE TABLE `site_settings` (
 --
 
 INSERT INTO `site_settings` (`settings_id`, `site_title`, `title`, `subtitle`, `picture`) VALUES
-(1, 'Büşra Ertekin', 'Büşra Ertekin', 'BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ', 'Smile by Toastyz.png');
+(1, 'Büşra Ertekin', 'Büşra Ertekin', 'BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ', 'Screenshot_1.png');
 
 -- --------------------------------------------------------
 
@@ -173,7 +173,7 @@ CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
   `user_name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(256) NOT NULL
+  `password` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `email`, `password`) VALUES
-(1, 'busra', 'nssdsd@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b');
+(1, 'admin', 'nssdsd@gmail.com', '48058e0c99bf7d689ce71c360699a14ce2f99774');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
